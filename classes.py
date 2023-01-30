@@ -14,7 +14,7 @@ class UnitClass:
     skill: Skill
 
 
-WarriorClass = UnitClass (
+WarriorClass = UnitClass(
 
     name="Воин",
     max_health=60.0,
@@ -26,7 +26,7 @@ WarriorClass = UnitClass (
 )
 
 
-ThiefClass = UnitClass (
+ThiefClass = UnitClass(
 
     name="Вор",
     max_health=50.0,
