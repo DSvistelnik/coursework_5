@@ -3,8 +3,6 @@ from abc import ABC, abstractmethod
 from equipment import Equipment, Weapon, Armor
 from classes import UnitClass
 from random import randint
-from typing import Optional
-
 
 class BaseUnit(ABC):
     """
@@ -111,7 +109,6 @@ class PlayerUnit(BaseUnit):
 
         )
 
-
 class EnemyUnit(BaseUnit):
 
     def hit(self, target: BaseUnit) -> str:
@@ -120,8 +117,7 @@ class EnemyUnit(BaseUnit):
         должна содержать логику применения соперником умения
         (он должен делать это автоматически и только 1 раз за бой).
         Например, для этих целей можно использовать функцию randint из библиотеки random.
-        Если умение не применено, противник наносит простой удар, где также используется
-        функция _count_damage(target
+
         """
 
         if not self.is_skill_used and self.stamina >= self.unit_class.skill.stamina and randint(0, 100) < 10:
